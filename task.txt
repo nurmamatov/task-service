@@ -1,0 +1,8 @@
+TASK service fieldlari
+id,assignee,title,summary,deadline,status,created_at,updated_at,deleted_at.
+
+create,get,list,update,delete,ListOverdue methodlari bo'lsin...
+ListOverdue:deadline o'tgan tasklarning listini chiqarish
+
+
+

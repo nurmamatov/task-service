@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+    rpc Create(Task) returns (Task);
+    rpc Get(Task) returns (Task);
+    rpc List(Empty) returns (Tasks);
+    rpc Update(Task) returns (Task);
+    rpc Delete(Task) returns (Message);
+    rpc ListOverdue(Empty) returns (Tasks);
+}
+
+
+message Task {
+    string  id = 1;
+    string assignee = 2;
+    string title = 3;
+    string deadline = 4;
+    string status = 5;
+    string created_at = 6;
+    string updated_at = 7;
+    string deleted_at = 8;
+}
+
+message Empty {}
+
+message Tasks {
+    repeated Task tasks = 1;
+}
+message Message {
+    string message = 1;
+}
